@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <title>Login Form</title>
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+    />
+    <style>
+      body {
+        background-image: url("./bg\ .png");
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        background-attachment: fixed;
+        
+    
+        
+      }
+      .container{
+        background-color: #ffffff;
+      }
+      .login-container {
+        max-width: 400px;
+        margin: auto;
+        margin-top: 100px;
+        border: #ffffff solid 1px;
+        padding: 30px;
+        border-radius: 10px;
+        box-shadow: 0px 0px 15px 0px #ececec;
+      }
+      .login-btn {
+        width: 150px;
+        margin: auto;
+        background-color:#18479F/* Renk değişikliği */
+      }
+      img {
+        height: 100px;
+        margin: auto;
+        display: block;
+      }
+ 
+    </style>
+  </head>
+  <body>
+    <div class="container login-container">
+      <img src="./eru.png" alt="profile" />
+      <div class="text-center mt-5 mb-5">
+        <button class="btn btn-primary" onclick="toggleForm('lecturer-form')">
+          Academician
+        </button>
+        <button class="btn btn-primary" onclick="toggleForm('student-form')">
+          Student
+        </button>
+      </div>
+
+      <!-- User Login Form -->
+      <div id="lecturer-form">
+        <form action="#" method="post">
+          <div class="form-group">
+            <input
+              type="text"
+              class="form-control"
+              id="lecturerUsername"
+              name="lecturerUsername"
+              placeholder="Enter Academician Number"
+              required
+            />
+          </div>
+          <div class="form-group">
+            <input
+              type="password"
+              class="form-control"
+              id="lecturerPassword"
+              name="lecturerPassword"
+              placeholder="Enter Academician Password"
+              required
+            />
+          </div>
+          <button type="submit" class="btn btn-primary btn-block login-btn">
+            Academician  <i class="fas fa-sign-in-alt"></i>
+          </button>
+        </form>
+      </div>
+
+      <!-- School Login Form -->
+      <div id="student-form" style="display: none">
+        <form action="#" method="post">
+          <div class="form-group">
+            <input
+              type="text"
+              class="form-control"
+              id="studentUsername"
+              name="studentUsername"
+              placeholder="Enter Student Number"
+              required
+            />
+          </div>
+          <div class="form-group">
+            <input
+              type="password"
+              class="form-control"
+              id="studentPassword"
+              name="studentPassword"
+                placeholder="Enter Student Password"
+              required
+            />
+          </div>
+          <button type="submit" class="btn btn-primary btn-block login-btn">
+            Student <i class="fas fa-sign-in-alt"></i>
+          </button>
+        </form>
+      </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    <script>
+      function toggleForm(formId) {
+        // Hide all forms
+        document.getElementById("lecturer-form").style.display = "none";
+        document.getElementById("student-form").style.display = "none";
+
+        // Display the selected form
+        document.getElementById(formId).style.display = "block";
+      }
+    </script>
+  </body>
+</html>
