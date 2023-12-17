@@ -5,6 +5,7 @@ aside {
   height: 100vh;
   background-image: linear-gradient(30deg , #0557db, #5eaef5);
   border-top-right-radius: 80px;
+  box-sizing: border-box;
 }
 
 aside a {
