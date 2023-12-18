@@ -35,6 +35,11 @@
   .modal-body {
     font-size: 16px; /* Adjust the font size inside the modal body */
   }
+  .modal-body iframe {
+    width: 100%;
+    border: none; /* If you want to remove the border around the iframe */
+}
+
   .modal-title {
     font-size: 15px;
     text-align: center;
@@ -43,6 +48,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    width: 800px;
   }
   .fa-eye:hover {
     cursor: pointer;
