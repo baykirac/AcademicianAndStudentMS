@@ -8,8 +8,10 @@
     />
     <title>Login Form</title>
     <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
       rel="stylesheet"
-      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+      crossorigin="anonymous"
     />
     <link
       rel="stylesheet"
@@ -23,7 +25,7 @@
         background-position: center;
         background-attachment: fixed;
       }
-      .container{
+      .container {
         background-color: #ffffff;
       }
       .login-container {
@@ -38,18 +40,21 @@
       .login-btn {
         width: 150px;
         margin: auto;
-        background-color:#18479F
+        background-color: #18479f;
+        margin-top: 1rem;
+        margin-left: 5rem; /* İhtiyaca göre ayarlayın */
+        
       }
       img {
         height: 100px;
         margin: auto;
         display: block;
       }
- 
+      
     </style>
   </head>
   <body>
-    <div class="container login-container">
+    <div class="container login-container ">
       <img src="images/eru.png" alt="profile" />
       <div class="text-center mt-5 mb-5">
         <button class="btn btn-primary" onclick="toggleForm('lecturer-form')">
@@ -60,6 +65,9 @@
         </button>
       </div>
 
+      <div>
+        
+      </div>
       <div id="lecturer-form">
         <form action="#" method="post">
           <div class="form-group">
@@ -83,7 +91,7 @@
             />
           </div>
           <button type="submit" class="btn btn-primary btn-block login-btn">
-            Academician  <i class="fas fa-sign-in-alt"></i>
+            Academician <i class="fas fa-sign-in-alt"></i>
           </button>
         </form>
       </div>
@@ -106,7 +114,7 @@
               class="form-control"
               id="studentPassword"
               name="studentPassword"
-                placeholder="Enter Student Password"
+              placeholder="Enter Student Password"
               required
             />
           </div>
@@ -117,9 +125,11 @@
       </div>
     </div>
 
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+      crossorigin="anonymous"
+    ></script>
 
     <script>
       function toggleForm(formId) {
