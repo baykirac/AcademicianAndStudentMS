@@ -1,0 +1,50 @@
+.card-title {
+    background: linear-gradient(30deg, #0557db, #5eaef5);
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+    padding: 10px;
+    text-align: center;
+    border-radius: 20px 20px 0 0; /* Adjust the border radius as needed */
+  }
+  .card-body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .table tbody tr:hover {
+    background-color: #f0f0f0;
+  }
+  .table {
+    border-radius: 10px; /* Adjust the border radius as needed */
+    font-size: 16px; /* Adjust the font size in the table */
+
+  }
+  .card {
+    font-size: 16px;
+    border-radius: 20px 20px 20px 20px; /* Adjust the border radius as needed */
+  }
+  .modal{
+    border-radius: 20px 20px 20px 20px; /* Adjust the border radius as needed */
+  }
+  .modal-header {
+    background: linear-gradient(30deg, #0557db, #5eaef5);
+    color: white;
+  }
+  .modal-body {
+    font-size: 16px; /* Adjust the font size inside the modal body */
+  }
+  .modal-title {
+    font-size: 15px;
+    text-align: center;
+    font-weight: bold;
+    margin: 0 auto; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .fa-eye:hover {
+    cursor: pointer;
+    color: #007bff; /* Bootstrap primary color */
+  }
