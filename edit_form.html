@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Proje Formu</title>
+
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    />
+  </head>
+  <body>
+    <div class="container mt-5">
+      <form>
+
+        <div class="form-group">
+          <label for="projeIsmi">Proje İsmi:</label>
+          <input
+            type="text"
+            class="form-control"
+            id="projeIsmi"
+            placeholder="Proje İsmi"
+          />
+        </div>
+
+        <div class="form-group">
+          <label for="projedekiOgrenciler">Projedeki Öğrenciler:</label>
+          <select multiple class="form-control" id="projedekiOgrenciler">
+            <option>1030510999 Ali</option>
+            <option>1030510998 Veli</option>
+            <option>1030510997 Mehmet</option>
+
+          </select>
+          <button type="button" class="btn btn-success mt-2" id="ekleButton">
+            Ekle
+          </button>
+        </div>
+
+        <div class="form-group">
+          <label for="eklenenOgrenciler">Eklenen Öğrenciler:</label>
+          <ul class="list-group" id="eklenenOgrenciler"></ul>
+        </div>
+
+
+        <div class="form-group">
+          <label for="akademisyenIsmi">Akademisyen İsmi:</label>
+          <select class="form-control" id="akademisyenIsmi">
+            <option>Akademisyen 1</option>
+            <option>Akademisyen 2</option>
+            <option>Akademisyen 3</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="projeAciklamasi">Proje Açıklaması:</label>
+          <textarea
+            class="form-control"
+            id="projeAciklamasi"
+            rows="5"
+            placeholder="Proje Açıklaması"
+          ></textarea>
+        </div>
+
+        <button type="submit" class="btn btn-primary">Projeyi Düzenle</button>
+      </form>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+    <script>
+      $(document).ready(function () {
+        var eklenenOgrenciler = [];
+
+        $("#ekleButton").click(function () {
+          var seciliOgrenciler = $("#projedekiOgrenciler option:selected");
+
+          seciliOgrenciler.each(function () {
+            var ogrenciAdi = $(this).text();
+            if (eklenenOgrenciler.indexOf(ogrenciAdi) === -1) {
+              eklenenOgrenciler.push(ogrenciAdi);
+              $("#eklenenOgrenciler").append(
+                '<li class="list-group-item">' +
+                  ogrenciAdi +
+                  ' <button type="button" class="btn btn-danger btn-sm float-right" onclick="silOgrenci(\'' +
+                  ogrenciAdi +
+                  "')\">X</button></li>"
+              );
+            }
+          });
+        });
+        window.silOgrenci = function (ogrenciAdi) {
+          eklenenOgrenciler = eklenenOgrenciler.filter(function (value) {
+            return value !== ogrenciAdi;
+          });
+
+          $("#eklenenOgrenciler li:contains('" + ogrenciAdi + "')").remove();
+        };
+      });
+    </script>
+  </body>
+</html>
